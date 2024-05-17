@@ -5,9 +5,8 @@ export function updateCheckedStatus(appName, checked) {
 
 let appList = [];
 var PORT = import.meta.env.VITE_PORT;
-console
-let uri = "http://localhost:"+ (PORT || 4000)+"/getApps";
-console.log(uri);
+let uri = "http://easy-install-server.vercel.app/getApps";
+
 async function fetchAppList()
 {
     try{
