@@ -1,9 +1,17 @@
 const express = require("express");
 const cors = require("cors");
-const app = express();
+
 const mongoose = require("mongoose");
 
-app.use(cors());
+app.use(cors(
+    {
+        origin: "https://easy-install.vercel.app",
+        methods: ["GET", "POST"],
+        credentials: true
+    }
+));
+
+const app = express();
 
 app.get("/", (req, res) => {
   res.send({ data: "Hello World!" });
