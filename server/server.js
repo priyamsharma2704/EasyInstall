@@ -1,8 +1,9 @@
 const express = require("express");
 const cors = require("cors");
-
 const mongoose = require("mongoose");
 
+
+const app = express();
 app.use(cors(
     {
         origin: "https://easy-install.vercel.app",
@@ -10,8 +11,6 @@ app.use(cors(
         credentials: true
     }
 ));
-
-const app = express();
 
 app.get("/", (req, res) => {
   res.send({ data: "Hello World!" });
